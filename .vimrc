@@ -62,6 +62,35 @@ set history=1000
 set showtabline=2
 
 
+
+" ALE CONFIGURATION
+
+
+
+" Use ALE as a LSP client
+let g:ale_disable_lsp = 0
+let g:ale_completion_enabled = 1
+let g:ale_set_highlights = 0
+
+" Automatic lint
+" Do not lint while typing
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_lint_on_insert_leave = 1
+
+" Show errors on the airline
+let g:airline#extensions#ale#enabled = 1
+
+" Just a delay
+let g:ale_lint_delay = 300
+
+let g:ale_linters = {
+\   'c': ['clangd', 'gcc'],
+\   'cpp': ['clangd'],
+\}
+
+
+
+
 " NERDTREE TOGGLE/MAPS
 nnoremap <leader>e :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
