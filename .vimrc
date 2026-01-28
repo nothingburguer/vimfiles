@@ -78,7 +78,7 @@ let g:ale_lint_on_text_changed = 'never'
 let g:ale_lint_on_insert_leave = 1
 
 " Show errors on the airline
-let g:airline#extensions#ale#enabled = 1
+" let g:airline#extensions#ale#enabled = 1
 
 " Just a delay
 let g:ale_lint_delay = 300
