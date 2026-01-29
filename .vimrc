@@ -18,6 +18,12 @@ call plug#begin('~/.vim/plugged')
 
 	Plug 'vim-airline/vim-airline-themes'
 
+	Plug 'Yggdroot/indentLine'
+
+    Plug 'ciaranm/detectindent'
+
+    Plug 'nathanaelkane/vim-indent-guides'
+
 call plug#end()
 
 " }}}
@@ -42,6 +48,9 @@ set relativenumber
 
 " Highlight cursor line underneath the cursor horizontally.
 set cursorline
+
+" Spaces on tabs
+" set expandtab
 
 " Set shift width to 4 spaces.
 set shiftwidth=4
@@ -95,10 +104,23 @@ let g:ale_linters = {
 nnoremap <leader>e :NERDTreeToggle<CR>
 nnoremap <leader>f :NERDTreeFind<CR>
 
+
 " VIM-AIRLINE MAPS
 nnoremap <leader>, :bprevious<CR>
 nnoremap <leader>. :bnext<CR>
 nnoremap <leader>q :bd<CR>
+
+
+" INDENT LINES
+let g:indentLine_enabled = 1
+let g:indentLine_char = '┊'
+
+
+" GUIDE LINES
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_auto_colors = 0
+highlight IndentGuidesOdd  ctermfg=235
+highlight IndentGuidesEven ctermfg=233
 
 
 " COLORSCHEME
